@@ -1,0 +1,8 @@
+D:\NAsearchG\AnalyticsScraper\AnalyticsScraper\bin\Debug\AnalyticsScraper.exe.config
+D:\NAsearchG\AnalyticsScraper\AnalyticsScraper\bin\Debug\AnalyticsScraper.exe
+D:\NAsearchG\AnalyticsScraper\AnalyticsScraper\bin\Debug\AnalyticsScraper.pdb
+D:\NAsearchG\AnalyticsScraper\AnalyticsScraper\obj\Debug\AnalyticsScraper.csprojResolveAssemblyReference.cache
+D:\NAsearchG\AnalyticsScraper\AnalyticsScraper\obj\Debug\AnalyticsScraper.exe
+D:\NAsearchG\AnalyticsScraper\AnalyticsScraper\obj\Debug\AnalyticsScraper.pdb
+D:\NAsearchG\AnalyticsScraper\AnalyticsScraper\bin\Debug\FileHelpers.dll
+D:\NAsearchG\AnalyticsScraper\AnalyticsScraper\bin\Debug\FileHelpers.xml
