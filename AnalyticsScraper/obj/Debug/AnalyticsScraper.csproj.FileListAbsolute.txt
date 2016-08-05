@@ -6,3 +6,11 @@ D:\NAsearchG\AnalyticsScraper\AnalyticsScraper\obj\Debug\AnalyticsScraper.exe
 D:\NAsearchG\AnalyticsScraper\AnalyticsScraper\obj\Debug\AnalyticsScraper.pdb
 D:\NAsearchG\AnalyticsScraper\AnalyticsScraper\bin\Debug\FileHelpers.dll
 D:\NAsearchG\AnalyticsScraper\AnalyticsScraper\bin\Debug\FileHelpers.xml
+D:\NAsearchG\AnalyticsScraper\AnalyticsScraper\bin\Debug\EntityFramework.dll
+D:\NAsearchG\AnalyticsScraper\AnalyticsScraper\bin\Debug\EntityFramework.SqlServer.dll
+D:\NAsearchG\AnalyticsScraper\AnalyticsScraper\bin\Debug\EntityFramework.xml
+D:\NAsearchG\AnalyticsScraper\AnalyticsScraper\bin\Debug\EntityFramework.SqlServer.xml
+D:\NAsearchG\AnalyticsScraper\AnalyticsScraper\bin\Debug\AnalyticsScraper.exe.manifest
+D:\NAsearchG\AnalyticsScraper\AnalyticsScraper\bin\Debug\AnalyticsScraper.application
+D:\NAsearchG\AnalyticsScraper\AnalyticsScraper\obj\Debug\AnalyticsScraper.exe.manifest
+D:\NAsearchG\AnalyticsScraper\AnalyticsScraper\obj\Debug\AnalyticsScraper.application

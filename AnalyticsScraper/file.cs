@@ -48,7 +48,23 @@ namespace AnalyticsScraper
         [FieldOptional]
         public String Optional4;
     }
-
+    [DelimitedRecord(",")]
+    public class GenericDataRecord
+    {
+        public string f1;
+        [FieldOptional]
+        public string f2;
+        [FieldOptional]
+        public string f3;
+        [FieldOptional]
+        public string f4;
+        [FieldOptional]
+        public string f5;
+        [FieldOptional]
+        public string f6;
+        [FieldOptional]
+        public string f7;
+    }
     [DelimitedRecord(",")]
     public class ParsedRecord
     {
@@ -125,6 +141,6 @@ namespace AnalyticsScraper
 
             return x;
         }
-
+       
     }
 }

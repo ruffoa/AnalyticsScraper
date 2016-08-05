@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StrategicStrikeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Jobs">
+    <Key>
+      <PropertyRef Name="jbJobID" />
+    </Key>
+    <Property Name="jbJobID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jbLanguageID" Type="smallint" Nullable="false" />
+    <Property Name="jbClientID" Type="int" Nullable="false" />
+    <Property Name="jbLocationID" Type="int" />
+    <Property Name="jbAgentID" Type="nvarchar" MaxLength="10" />
+    <Property Name="jbJobDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="jbJobCatID" Type="smallint" />
+    <Property Name="jbJobLevelLow" Type="smallint" />
+    <Property Name="jbJobLevelHigh" Type="smallint" />
+    <Property Name="jbJobTitle" Type="nvarchar" MaxLength="70" Nullable="false" />
+    <Property Name="jbIntTitleID" Type="smallint" />
+    <Property Name="jbDepartment" Type="nvarchar" MaxLength="100" />
+    <Property Name="jbDescription" Type="ntext" />
+    <Property Name="jbAttachment" Type="nvarchar" MaxLength="50" />
+    <Property Name="jbCandidateID" Type="int" />
+    <Property Name="jbFilledDate" Type="smalldatetime" />
+    <Property Name="jbOnWeb" Type="bit" />
+    <Property Name="jbReportToID" Type="int" />
+    <Property Name="jbReportTo" Type="nvarchar" MaxLength="50" />
+    <Property Name="jbTotalExams" Type="tinyint" />
+    <Property Name="jbTotalCredits" Type="smallint" />
+    <Property Name="jbPDCredits" Type="smallint" />
+    <Property Name="jbExamMin" Type="tinyint" />
+    <Property Name="jbExamMax" Type="tinyint" />
+    <Property Name="jbExp1a" Type="nvarchar" MaxLength="50" />
+    <Property Name="jbExp1b" Type="nvarchar" MaxLength="50" />
+    <Property Name="jbExp1c" Type="nvarchar" MaxLength="50" />
+    <Property Name="jbSalaryLow" Type="smallmoney" />
+    <Property Name="jbSalaryHigh" Type="smallmoney" />
+    <Property Name="jbSalaryCurrency" Type="smallint" />
+    <Property Name="jbBonus" Type="ntext" />
+    <Property Name="jbLife" Type="smallint" Nullable="false" />
+    <Property Name="jbNotes" Type="ntext" />
+    <Property Name="jbLastUpdate" Type="smalldatetime" Nullable="false" />
+    <Property Name="jbCountryID" Type="smallint" />
+    <Property Name="jbStateID" Type="smallint" />
+    <Property Name="jbCityID" Type="smallint" />
+    <Property Name="jbState" Type="nvarchar" MaxLength="50" />
+    <Property Name="jbCity" Type="nvarchar" MaxLength="50" />
+    <Property Name="jbCityVisible" Type="bit" Nullable="false" />
+    <Property Name="jbStateVisible" Type="bit" Nullable="false" />
+    <Property Name="jbCountryVisible" Type="bit" Nullable="false" />
+    <Property Name="jbEntryLevel" Type="bit" />
+    <Property Name="jbReferenceID" Type="nvarchar" MaxLength="20" />
+    <Property Name="jbCreatedBy" Type="nvarchar" MaxLength="25" />
+    <Property Name="jbLastUpdateBy" Type="nvarchar" MaxLength="25" />
+    <Property Name="jbPostingFrom" Type="smalldatetime" />
+    <Property Name="jbPostingTo" Type="smalldatetime" />
+    <Property Name="jbOnWebFrom" Type="smalldatetime" />
+    <Property Name="jbOnWebTo" Type="smalldatetime" />
+    <Property Name="jbActive" Type="bit" />
+    <Property Name="jbSalaryLowUS" Type="float" />
+    <Property Name="jbSalaryHighUS" Type="float" />
+    <Property Name="jbEmail" Type="varchar" MaxLength="50" />
+    <Property Name="jbUnknownClient" Type="bit" Nullable="false" />
+    <Property Name="jbFellow" Type="bit" Nullable="false" />
+    <Property Name="jbWriting" Type="bit" Nullable="false" />
+    <Property Name="jbNotWriting" Type="bit" Nullable="false" />
+    <Property Name="jbTotalSalaryLow" Type="smallmoney" />
+    <Property Name="jbTotalSalaryHigh" Type="smallmoney" />
+    <Property Name="jbRefCode" Type="varchar" MaxLength="100" />
+    <Property Name="jbURL" Type="varchar" MaxLength="300" />
+    <Property Name="jbCreateDate" Type="datetime" />
+    <Property Name="jbContactInfo" Type="ntext" />
+    <Property Name="jbInternship" Type="bit" Nullable="false" />
+    <Property Name="jbSkinJobs4Act" Type="bit" />
+    <Property Name="jbSkinNASG" Type="bit" />
+    <Property Name="jbSkinATS" Type="bit" />
+    <Property Name="jbKeywordsMetaTag" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="plCompanyCategory">
+    <Key>
+      <PropertyRef Name="ccategoryID" />
+    </Key>
+    <Property Name="ccategoryID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ccategory" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ccProductID" Type="smallint" />
+    <Property Name="disabled" Type="bit" Nullable="false" />
+    <Property Name="ccategorydeDE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ccategoryenGB" Type="nvarchar" MaxLength="50" />
+    <Property Name="ccategoryzhCN" Type="nvarchar" MaxLength="50" />
+    <Property Name="ccategoryfrFR" Type="nvarchar" MaxLength="50" />
+    <Property Name="ccategorykoKR" Type="nvarchar" MaxLength="50" />
+    <Property Name="ccategoryjaJP" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="plCountry">
+    <Key>
+      <PropertyRef Name="countryID" />
+    </Key>
+    <Property Name="countryID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="country" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="disabled" Type="bit" Nullable="false" />
+    <Property Name="onTop" Type="smallint" Nullable="false" />
+    <Property Name="plcCurrencyID" Type="smallint" />
+    <Property Name="Country_Code" Type="nvarchar" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="plJobKeywords">
+    <Key>
+      <PropertyRef Name="jkWords" />
+    </Key>
+    <Property Name="jkWords" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="plState">
+    <Key>
+      <PropertyRef Name="stateID" />
+    </Key>
+    <Property Name="stateID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="stateCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="stateName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="stCountryID" Type="smallint" />
+    <Property Name="disabled" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="StrategicStrikeModelStoreContainer">
+    <EntitySet Name="Jobs" EntityType="Self.Jobs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="plCompanyCategory" EntityType="Self.plCompanyCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="plCountry" EntityType="Self.plCountry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="plJobKeywords" EntityType="Self.plJobKeywords" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="plState" EntityType="Self.plState" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

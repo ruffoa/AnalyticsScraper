@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StrategicStrikeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="plCountry">
+    <Key>
+      <PropertyRef Name="countryID" />
+    </Key>
+    <Property Name="countryID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="disabled" Type="Boolean" Nullable="false" />
+    <Property Name="onTop" Type="Int16" Nullable="false" />
+    <Property Name="plcCurrencyID" Type="Int16" />
+    <Property Name="Country_Code" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="StrategicStrikeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="plCountries" EntityType="Self.plCountry" />
+    <EntitySet Name="plStates" EntityType="StrategicStrikeModel.plState" />
+    <EntitySet Name="plCompanyCategories" EntityType="StrategicStrikeModel.plCompanyCategory" />
+    <EntitySet Name="Jobs" EntityType="StrategicStrikeModel.Job" />
+    <EntitySet Name="plJobKeywords" EntityType="StrategicStrikeModel.plJobKeyword" />
+  </EntityContainer>
+  <EntityType Name="plState">
+    <Key>
+      <PropertyRef Name="stateID" />
+    </Key>
+    <Property Name="stateID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="stateCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="stateName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="stCountryID" Type="Int16" />
+    <Property Name="disabled" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="plCompanyCategory">
+    <Key>
+      <PropertyRef Name="ccategoryID" />
+    </Key>
+    <Property Name="ccategoryID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ccategory" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ccProductID" Type="Int16" />
+    <Property Name="disabled" Type="Boolean" Nullable="false" />
+    <Property Name="ccategorydeDE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ccategoryenGB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ccategoryzhCN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ccategoryfrFR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ccategorykoKR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ccategoryjaJP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Job">
+    <Key>
+      <PropertyRef Name="jbJobID" />
+    </Key>
+    <Property Name="jbJobID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="jbLanguageID" Type="Int16" Nullable="false" />
+    <Property Name="jbClientID" Type="Int32" Nullable="false" />
+    <Property Name="jbLocationID" Type="Int32" />
+    <Property Name="jbAgentID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="jbJobDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="jbJobCatID" Type="Int16" />
+    <Property Name="jbJobLevelLow" Type="Int16" />
+    <Property Name="jbJobLevelHigh" Type="Int16" />
+    <Property Name="jbJobTitle" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="jbIntTitleID" Type="Int16" />
+    <Property Name="jbDepartment" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="jbDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="jbAttachment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="jbCandidateID" Type="Int32" />
+    <Property Name="jbFilledDate" Type="DateTime" Precision="0" />
+    <Property Name="jbOnWeb" Type="Boolean" />
+    <Property Name="jbReportToID" Type="Int32" />
+    <Property Name="jbReportTo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="jbTotalExams" Type="Byte" />
+    <Property Name="jbTotalCredits" Type="Int16" />
+    <Property Name="jbPDCredits" Type="Int16" />
+    <Property Name="jbExamMin" Type="Byte" />
+    <Property Name="jbExamMax" Type="Byte" />
+    <Property Name="jbExp1a" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="jbExp1b" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="jbExp1c" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="jbSalaryLow" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="jbSalaryHigh" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="jbSalaryCurrency" Type="Int16" />
+    <Property Name="jbBonus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="jbLife" Type="Int16" Nullable="false" />
+    <Property Name="jbNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="jbLastUpdate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="jbCountryID" Type="Int16" />
+    <Property Name="jbStateID" Type="Int16" />
+    <Property Name="jbCityID" Type="Int16" />
+    <Property Name="jbState" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="jbCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="jbCityVisible" Type="Boolean" Nullable="false" />
+    <Property Name="jbStateVisible" Type="Boolean" Nullable="false" />
+    <Property Name="jbCountryVisible" Type="Boolean" Nullable="false" />
+    <Property Name="jbEntryLevel" Type="Boolean" />
+    <Property Name="jbReferenceID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="jbCreatedBy" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="jbLastUpdateBy" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="jbPostingFrom" Type="DateTime" Precision="0" />
+    <Property Name="jbPostingTo" Type="DateTime" Precision="0" />
+    <Property Name="jbOnWebFrom" Type="DateTime" Precision="0" />
+    <Property Name="jbOnWebTo" Type="DateTime" Precision="0" />
+    <Property Name="jbActive" Type="Boolean" />
+    <Property Name="jbSalaryLowUS" Type="Double" />
+    <Property Name="jbSalaryHighUS" Type="Double" />
+    <Property Name="jbEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="jbUnknownClient" Type="Boolean" Nullable="false" />
+    <Property Name="jbFellow" Type="Boolean" Nullable="false" />
+    <Property Name="jbWriting" Type="Boolean" Nullable="false" />
+    <Property Name="jbNotWriting" Type="Boolean" Nullable="false" />
+    <Property Name="jbTotalSalaryLow" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="jbTotalSalaryHigh" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="jbRefCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="jbURL" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="jbCreateDate" Type="DateTime" Precision="3" />
+    <Property Name="jbContactInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="jbInternship" Type="Boolean" Nullable="false" />
+    <Property Name="jbSkinJobs4Act" Type="Boolean" />
+    <Property Name="jbSkinNASG" Type="Boolean" />
+    <Property Name="jbSkinATS" Type="Boolean" />
+    <Property Name="jbKeywordsMetaTag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="plJobKeyword">
+    <Key>
+      <PropertyRef Name="jkWords" />
+    </Key>
+    <Property Name="jkWords" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

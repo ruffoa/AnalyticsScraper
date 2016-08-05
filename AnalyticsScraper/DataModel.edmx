@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="StrategicStrikeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Jobs">
+          <Key>
+            <PropertyRef Name="jbJobID" />
+          </Key>
+          <Property Name="jbJobID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="jbLanguageID" Type="smallint" Nullable="false" />
+          <Property Name="jbClientID" Type="int" Nullable="false" />
+          <Property Name="jbLocationID" Type="int" />
+          <Property Name="jbAgentID" Type="nvarchar" MaxLength="10" />
+          <Property Name="jbJobDate" Type="smalldatetime" Nullable="false" />
+          <Property Name="jbJobCatID" Type="smallint" />
+          <Property Name="jbJobLevelLow" Type="smallint" />
+          <Property Name="jbJobLevelHigh" Type="smallint" />
+          <Property Name="jbJobTitle" Type="nvarchar" MaxLength="70" Nullable="false" />
+          <Property Name="jbIntTitleID" Type="smallint" />
+          <Property Name="jbDepartment" Type="nvarchar" MaxLength="100" />
+          <Property Name="jbDescription" Type="ntext" />
+          <Property Name="jbAttachment" Type="nvarchar" MaxLength="50" />
+          <Property Name="jbCandidateID" Type="int" />
+          <Property Name="jbFilledDate" Type="smalldatetime" />
+          <Property Name="jbOnWeb" Type="bit" />
+          <Property Name="jbReportToID" Type="int" />
+          <Property Name="jbReportTo" Type="nvarchar" MaxLength="50" />
+          <Property Name="jbTotalExams" Type="tinyint" />
+          <Property Name="jbTotalCredits" Type="smallint" />
+          <Property Name="jbPDCredits" Type="smallint" />
+          <Property Name="jbExamMin" Type="tinyint" />
+          <Property Name="jbExamMax" Type="tinyint" />
+          <Property Name="jbExp1a" Type="nvarchar" MaxLength="50" />
+          <Property Name="jbExp1b" Type="nvarchar" MaxLength="50" />
+          <Property Name="jbExp1c" Type="nvarchar" MaxLength="50" />
+          <Property Name="jbSalaryLow" Type="smallmoney" />
+          <Property Name="jbSalaryHigh" Type="smallmoney" />
+          <Property Name="jbSalaryCurrency" Type="smallint" />
+          <Property Name="jbBonus" Type="ntext" />
+          <Property Name="jbLife" Type="smallint" Nullable="false" />
+          <Property Name="jbNotes" Type="ntext" />
+          <Property Name="jbLastUpdate" Type="smalldatetime" Nullable="false" />
+          <Property Name="jbCountryID" Type="smallint" />
+          <Property Name="jbStateID" Type="smallint" />
+          <Property Name="jbCityID" Type="smallint" />
+          <Property Name="jbState" Type="nvarchar" MaxLength="50" />
+          <Property Name="jbCity" Type="nvarchar" MaxLength="50" />
+          <Property Name="jbCityVisible" Type="bit" Nullable="false" />
+          <Property Name="jbStateVisible" Type="bit" Nullable="false" />
+          <Property Name="jbCountryVisible" Type="bit" Nullable="false" />
+          <Property Name="jbEntryLevel" Type="bit" />
+          <Property Name="jbReferenceID" Type="nvarchar" MaxLength="20" />
+          <Property Name="jbCreatedBy" Type="nvarchar" MaxLength="25" />
+          <Property Name="jbLastUpdateBy" Type="nvarchar" MaxLength="25" />
+          <Property Name="jbPostingFrom" Type="smalldatetime" />
+          <Property Name="jbPostingTo" Type="smalldatetime" />
+          <Property Name="jbOnWebFrom" Type="smalldatetime" />
+          <Property Name="jbOnWebTo" Type="smalldatetime" />
+          <Property Name="jbActive" Type="bit" />
+          <Property Name="jbSalaryLowUS" Type="float" />
+          <Property Name="jbSalaryHighUS" Type="float" />
+          <Property Name="jbEmail" Type="varchar" MaxLength="50" />
+          <Property Name="jbUnknownClient" Type="bit" Nullable="false" />
+          <Property Name="jbFellow" Type="bit" Nullable="false" />
+          <Property Name="jbWriting" Type="bit" Nullable="false" />
+          <Property Name="jbNotWriting" Type="bit" Nullable="false" />
+          <Property Name="jbTotalSalaryLow" Type="smallmoney" />
+          <Property Name="jbTotalSalaryHigh" Type="smallmoney" />
+          <Property Name="jbRefCode" Type="varchar" MaxLength="100" />
+          <Property Name="jbURL" Type="varchar" MaxLength="300" />
+          <Property Name="jbCreateDate" Type="datetime" />
+          <Property Name="jbContactInfo" Type="ntext" />
+          <Property Name="jbInternship" Type="bit" Nullable="false" />
+          <Property Name="jbSkinJobs4Act" Type="bit" />
+          <Property Name="jbSkinNASG" Type="bit" />
+          <Property Name="jbSkinATS" Type="bit" />
+          <Property Name="jbKeywordsMetaTag" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="plCompanyCategory">
+          <Key>
+            <PropertyRef Name="ccategoryID" />
+          </Key>
+          <Property Name="ccategoryID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ccategory" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ccProductID" Type="smallint" />
+          <Property Name="disabled" Type="bit" Nullable="false" />
+          <Property Name="ccategorydeDE" Type="nvarchar" MaxLength="50" />
+          <Property Name="ccategoryenGB" Type="nvarchar" MaxLength="50" />
+          <Property Name="ccategoryzhCN" Type="nvarchar" MaxLength="50" />
+          <Property Name="ccategoryfrFR" Type="nvarchar" MaxLength="50" />
+          <Property Name="ccategorykoKR" Type="nvarchar" MaxLength="50" />
+          <Property Name="ccategoryjaJP" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="plCountry">
+          <Key>
+            <PropertyRef Name="countryID" />
+          </Key>
+          <Property Name="countryID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="country" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="disabled" Type="bit" Nullable="false" />
+          <Property Name="onTop" Type="smallint" Nullable="false" />
+          <Property Name="plcCurrencyID" Type="smallint" />
+          <Property Name="Country_Code" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="plJobKeywords">
+          <Key>
+            <PropertyRef Name="jkWords" />
+          </Key>
+          <Property Name="jkWords" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="plState">
+          <Key>
+            <PropertyRef Name="stateID" />
+          </Key>
+          <Property Name="stateID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="stateCode" Type="nvarchar" MaxLength="10" />
+          <Property Name="stateName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="stCountryID" Type="smallint" />
+          <Property Name="disabled" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="StrategicStrikeModelStoreContainer">
+          <EntitySet Name="Jobs" EntityType="Self.Jobs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="plCompanyCategory" EntityType="Self.plCompanyCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="plCountry" EntityType="Self.plCountry" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="plJobKeywords" EntityType="Self.plJobKeywords" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="plState" EntityType="Self.plState" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="StrategicStrikeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="plCountry">
+          <Key>
+            <PropertyRef Name="countryID" />
+          </Key>
+          <Property Name="countryID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="disabled" Type="Boolean" Nullable="false" />
+          <Property Name="onTop" Type="Int16" Nullable="false" />
+          <Property Name="plcCurrencyID" Type="Int16" />
+          <Property Name="Country_Code" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="StrategicStrikeEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="plCountries" EntityType="Self.plCountry" />
+          <EntitySet Name="plStates" EntityType="StrategicStrikeModel.plState" />
+          <EntitySet Name="plCompanyCategories" EntityType="StrategicStrikeModel.plCompanyCategory" />
+          <EntitySet Name="Jobs" EntityType="StrategicStrikeModel.Job" />
+          <EntitySet Name="plJobKeywords" EntityType="StrategicStrikeModel.plJobKeyword" />
+        </EntityContainer>
+        <EntityType Name="plState">
+          <Key>
+            <PropertyRef Name="stateID" />
+          </Key>
+          <Property Name="stateID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="stateCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="stateName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="stCountryID" Type="Int16" />
+          <Property Name="disabled" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="plCompanyCategory">
+          <Key>
+            <PropertyRef Name="ccategoryID" />
+          </Key>
+          <Property Name="ccategoryID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ccategory" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ccProductID" Type="Int16" />
+          <Property Name="disabled" Type="Boolean" Nullable="false" />
+          <Property Name="ccategorydeDE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ccategoryenGB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ccategoryzhCN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ccategoryfrFR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ccategorykoKR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ccategoryjaJP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Job">
+          <Key>
+            <PropertyRef Name="jbJobID" />
+          </Key>
+          <Property Name="jbJobID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="jbLanguageID" Type="Int16" Nullable="false" />
+          <Property Name="jbClientID" Type="Int32" Nullable="false" />
+          <Property Name="jbLocationID" Type="Int32" />
+          <Property Name="jbAgentID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="jbJobDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="jbJobCatID" Type="Int16" />
+          <Property Name="jbJobLevelLow" Type="Int16" />
+          <Property Name="jbJobLevelHigh" Type="Int16" />
+          <Property Name="jbJobTitle" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="jbIntTitleID" Type="Int16" />
+          <Property Name="jbDepartment" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="jbDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="jbAttachment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="jbCandidateID" Type="Int32" />
+          <Property Name="jbFilledDate" Type="DateTime" Precision="0" />
+          <Property Name="jbOnWeb" Type="Boolean" />
+          <Property Name="jbReportToID" Type="Int32" />
+          <Property Name="jbReportTo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="jbTotalExams" Type="Byte" />
+          <Property Name="jbTotalCredits" Type="Int16" />
+          <Property Name="jbPDCredits" Type="Int16" />
+          <Property Name="jbExamMin" Type="Byte" />
+          <Property Name="jbExamMax" Type="Byte" />
+          <Property Name="jbExp1a" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="jbExp1b" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="jbExp1c" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="jbSalaryLow" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="jbSalaryHigh" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="jbSalaryCurrency" Type="Int16" />
+          <Property Name="jbBonus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="jbLife" Type="Int16" Nullable="false" />
+          <Property Name="jbNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="jbLastUpdate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="jbCountryID" Type="Int16" />
+          <Property Name="jbStateID" Type="Int16" />
+          <Property Name="jbCityID" Type="Int16" />
+          <Property Name="jbState" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="jbCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="jbCityVisible" Type="Boolean" Nullable="false" />
+          <Property Name="jbStateVisible" Type="Boolean" Nullable="false" />
+          <Property Name="jbCountryVisible" Type="Boolean" Nullable="false" />
+          <Property Name="jbEntryLevel" Type="Boolean" />
+          <Property Name="jbReferenceID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="jbCreatedBy" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="jbLastUpdateBy" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="jbPostingFrom" Type="DateTime" Precision="0" />
+          <Property Name="jbPostingTo" Type="DateTime" Precision="0" />
+          <Property Name="jbOnWebFrom" Type="DateTime" Precision="0" />
+          <Property Name="jbOnWebTo" Type="DateTime" Precision="0" />
+          <Property Name="jbActive" Type="Boolean" />
+          <Property Name="jbSalaryLowUS" Type="Double" />
+          <Property Name="jbSalaryHighUS" Type="Double" />
+          <Property Name="jbEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="jbUnknownClient" Type="Boolean" Nullable="false" />
+          <Property Name="jbFellow" Type="Boolean" Nullable="false" />
+          <Property Name="jbWriting" Type="Boolean" Nullable="false" />
+          <Property Name="jbNotWriting" Type="Boolean" Nullable="false" />
+          <Property Name="jbTotalSalaryLow" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="jbTotalSalaryHigh" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="jbRefCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="jbURL" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="jbCreateDate" Type="DateTime" Precision="3" />
+          <Property Name="jbContactInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="jbInternship" Type="Boolean" Nullable="false" />
+          <Property Name="jbSkinJobs4Act" Type="Boolean" />
+          <Property Name="jbSkinNASG" Type="Boolean" />
+          <Property Name="jbSkinATS" Type="Boolean" />
+          <Property Name="jbKeywordsMetaTag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="plJobKeyword">
+          <Key>
+            <PropertyRef Name="jkWords" />
+          </Key>
+          <Property Name="jkWords" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="StrategicStrikeModelStoreContainer" CdmEntityContainer="StrategicStrikeEntities">
+          <EntitySetMapping Name="plCountries">
+            <EntityTypeMapping TypeName="StrategicStrikeModel.plCountry">
+              <MappingFragment StoreEntitySet="plCountry">
+                <ScalarProperty Name="countryID" ColumnName="countryID" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="disabled" ColumnName="disabled" />
+                <ScalarProperty Name="onTop" ColumnName="onTop" />
+                <ScalarProperty Name="plcCurrencyID" ColumnName="plcCurrencyID" />
+                <ScalarProperty Name="Country_Code" ColumnName="Country_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="plStates">
+            <EntityTypeMapping TypeName="StrategicStrikeModel.plState">
+              <MappingFragment StoreEntitySet="plState">
+                <ScalarProperty Name="disabled" ColumnName="disabled" />
+                <ScalarProperty Name="stCountryID" ColumnName="stCountryID" />
+                <ScalarProperty Name="stateName" ColumnName="stateName" />
+                <ScalarProperty Name="stateCode" ColumnName="stateCode" />
+                <ScalarProperty Name="stateID" ColumnName="stateID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="plCompanyCategories">
+            <EntityTypeMapping TypeName="StrategicStrikeModel.plCompanyCategory">
+              <MappingFragment StoreEntitySet="plCompanyCategory">
+                <ScalarProperty Name="ccategoryjaJP" ColumnName="ccategoryjaJP" />
+                <ScalarProperty Name="ccategorykoKR" ColumnName="ccategorykoKR" />
+                <ScalarProperty Name="ccategoryfrFR" ColumnName="ccategoryfrFR" />
+                <ScalarProperty Name="ccategoryzhCN" ColumnName="ccategoryzhCN" />
+                <ScalarProperty Name="ccategoryenGB" ColumnName="ccategoryenGB" />
+                <ScalarProperty Name="ccategorydeDE" ColumnName="ccategorydeDE" />
+                <ScalarProperty Name="disabled" ColumnName="disabled" />
+                <ScalarProperty Name="ccProductID" ColumnName="ccProductID" />
+                <ScalarProperty Name="ccategory" ColumnName="ccategory" />
+                <ScalarProperty Name="ccategoryID" ColumnName="ccategoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Jobs">
+            <EntityTypeMapping TypeName="StrategicStrikeModel.Job">
+              <MappingFragment StoreEntitySet="Jobs">
+                <ScalarProperty Name="jbKeywordsMetaTag" ColumnName="jbKeywordsMetaTag" />
+                <ScalarProperty Name="jbSkinATS" ColumnName="jbSkinATS" />
+                <ScalarProperty Name="jbSkinNASG" ColumnName="jbSkinNASG" />
+                <ScalarProperty Name="jbSkinJobs4Act" ColumnName="jbSkinJobs4Act" />
+                <ScalarProperty Name="jbInternship" ColumnName="jbInternship" />
+                <ScalarProperty Name="jbContactInfo" ColumnName="jbContactInfo" />
+                <ScalarProperty Name="jbCreateDate" ColumnName="jbCreateDate" />
+                <ScalarProperty Name="jbURL" ColumnName="jbURL" />
+                <ScalarProperty Name="jbRefCode" ColumnName="jbRefCode" />
+                <ScalarProperty Name="jbTotalSalaryHigh" ColumnName="jbTotalSalaryHigh" />
+                <ScalarProperty Name="jbTotalSalaryLow" ColumnName="jbTotalSalaryLow" />
+                <ScalarProperty Name="jbNotWriting" ColumnName="jbNotWriting" />
+                <ScalarProperty Name="jbWriting" ColumnName="jbWriting" />
+                <ScalarProperty Name="jbFellow" ColumnName="jbFellow" />
+                <ScalarProperty Name="jbUnknownClient" ColumnName="jbUnknownClient" />
+                <ScalarProperty Name="jbEmail" ColumnName="jbEmail" />
+                <ScalarProperty Name="jbSalaryHighUS" ColumnName="jbSalaryHighUS" />
+                <ScalarProperty Name="jbSalaryLowUS" ColumnName="jbSalaryLowUS" />
+                <ScalarProperty Name="jbActive" ColumnName="jbActive" />
+                <ScalarProperty Name="jbOnWebTo" ColumnName="jbOnWebTo" />
+                <ScalarProperty Name="jbOnWebFrom" ColumnName="jbOnWebFrom" />
+                <ScalarProperty Name="jbPostingTo" ColumnName="jbPostingTo" />
+                <ScalarProperty Name="jbPostingFrom" ColumnName="jbPostingFrom" />
+                <ScalarProperty Name="jbLastUpdateBy" ColumnName="jbLastUpdateBy" />
+                <ScalarProperty Name="jbCreatedBy" ColumnName="jbCreatedBy" />
+                <ScalarProperty Name="jbReferenceID" ColumnName="jbReferenceID" />
+                <ScalarProperty Name="jbEntryLevel" ColumnName="jbEntryLevel" />
+                <ScalarProperty Name="jbCountryVisible" ColumnName="jbCountryVisible" />
+                <ScalarProperty Name="jbStateVisible" ColumnName="jbStateVisible" />
+                <ScalarProperty Name="jbCityVisible" ColumnName="jbCityVisible" />
+                <ScalarProperty Name="jbCity" ColumnName="jbCity" />
+                <ScalarProperty Name="jbState" ColumnName="jbState" />
+                <ScalarProperty Name="jbCityID" ColumnName="jbCityID" />
+                <ScalarProperty Name="jbStateID" ColumnName="jbStateID" />
+                <ScalarProperty Name="jbCountryID" ColumnName="jbCountryID" />
+                <ScalarProperty Name="jbLastUpdate" ColumnName="jbLastUpdate" />
+                <ScalarProperty Name="jbNotes" ColumnName="jbNotes" />
+                <ScalarProperty Name="jbLife" ColumnName="jbLife" />
+                <ScalarProperty Name="jbBonus" ColumnName="jbBonus" />
+                <ScalarProperty Name="jbSalaryCurrency" ColumnName="jbSalaryCurrency" />
+                <ScalarProperty Name="jbSalaryHigh" ColumnName="jbSalaryHigh" />
+                <ScalarProperty Name="jbSalaryLow" ColumnName="jbSalaryLow" />
+                <ScalarProperty Name="jbExp1c" ColumnName="jbExp1c" />
+                <ScalarProperty Name="jbExp1b" ColumnName="jbExp1b" />
+                <ScalarProperty Name="jbExp1a" ColumnName="jbExp1a" />
+                <ScalarProperty Name="jbExamMax" ColumnName="jbExamMax" />
+                <ScalarProperty Name="jbExamMin" ColumnName="jbExamMin" />
+                <ScalarProperty Name="jbPDCredits" ColumnName="jbPDCredits" />
+                <ScalarProperty Name="jbTotalCredits" ColumnName="jbTotalCredits" />
+                <ScalarProperty Name="jbTotalExams" ColumnName="jbTotalExams" />
+                <ScalarProperty Name="jbReportTo" ColumnName="jbReportTo" />
+                <ScalarProperty Name="jbReportToID" ColumnName="jbReportToID" />
+                <ScalarProperty Name="jbOnWeb" ColumnName="jbOnWeb" />
+                <ScalarProperty Name="jbFilledDate" ColumnName="jbFilledDate" />
+                <ScalarProperty Name="jbCandidateID" ColumnName="jbCandidateID" />
+                <ScalarProperty Name="jbAttachment" ColumnName="jbAttachment" />
+                <ScalarProperty Name="jbDescription" ColumnName="jbDescription" />
+                <ScalarProperty Name="jbDepartment" ColumnName="jbDepartment" />
+                <ScalarProperty Name="jbIntTitleID" ColumnName="jbIntTitleID" />
+                <ScalarProperty Name="jbJobTitle" ColumnName="jbJobTitle" />
+                <ScalarProperty Name="jbJobLevelHigh" ColumnName="jbJobLevelHigh" />
+                <ScalarProperty Name="jbJobLevelLow" ColumnName="jbJobLevelLow" />
+                <ScalarProperty Name="jbJobCatID" ColumnName="jbJobCatID" />
+                <ScalarProperty Name="jbJobDate" ColumnName="jbJobDate" />
+                <ScalarProperty Name="jbAgentID" ColumnName="jbAgentID" />
+                <ScalarProperty Name="jbLocationID" ColumnName="jbLocationID" />
+                <ScalarProperty Name="jbClientID" ColumnName="jbClientID" />
+                <ScalarProperty Name="jbLanguageID" ColumnName="jbLanguageID" />
+                <ScalarProperty Name="jbJobID" ColumnName="jbJobID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="plJobKeywords">
+            <EntityTypeMapping TypeName="StrategicStrikeModel.plJobKeyword">
+              <MappingFragment StoreEntitySet="plJobKeywords">
+                <ScalarProperty Name="jkWords" ColumnName="jkWords" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

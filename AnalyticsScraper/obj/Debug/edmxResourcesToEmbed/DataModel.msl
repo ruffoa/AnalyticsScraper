@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="StrategicStrikeModelStoreContainer" CdmEntityContainer="StrategicStrikeEntities">
+    <EntitySetMapping Name="plCountries">
+      <EntityTypeMapping TypeName="StrategicStrikeModel.plCountry">
+        <MappingFragment StoreEntitySet="plCountry">
+          <ScalarProperty Name="countryID" ColumnName="countryID" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="disabled" ColumnName="disabled" />
+          <ScalarProperty Name="onTop" ColumnName="onTop" />
+          <ScalarProperty Name="plcCurrencyID" ColumnName="plcCurrencyID" />
+          <ScalarProperty Name="Country_Code" ColumnName="Country_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="plStates">
+      <EntityTypeMapping TypeName="StrategicStrikeModel.plState">
+        <MappingFragment StoreEntitySet="plState">
+          <ScalarProperty Name="disabled" ColumnName="disabled" />
+          <ScalarProperty Name="stCountryID" ColumnName="stCountryID" />
+          <ScalarProperty Name="stateName" ColumnName="stateName" />
+          <ScalarProperty Name="stateCode" ColumnName="stateCode" />
+          <ScalarProperty Name="stateID" ColumnName="stateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="plCompanyCategories">
+      <EntityTypeMapping TypeName="StrategicStrikeModel.plCompanyCategory">
+        <MappingFragment StoreEntitySet="plCompanyCategory">
+          <ScalarProperty Name="ccategoryjaJP" ColumnName="ccategoryjaJP" />
+          <ScalarProperty Name="ccategorykoKR" ColumnName="ccategorykoKR" />
+          <ScalarProperty Name="ccategoryfrFR" ColumnName="ccategoryfrFR" />
+          <ScalarProperty Name="ccategoryzhCN" ColumnName="ccategoryzhCN" />
+          <ScalarProperty Name="ccategoryenGB" ColumnName="ccategoryenGB" />
+          <ScalarProperty Name="ccategorydeDE" ColumnName="ccategorydeDE" />
+          <ScalarProperty Name="disabled" ColumnName="disabled" />
+          <ScalarProperty Name="ccProductID" ColumnName="ccProductID" />
+          <ScalarProperty Name="ccategory" ColumnName="ccategory" />
+          <ScalarProperty Name="ccategoryID" ColumnName="ccategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Jobs">
+      <EntityTypeMapping TypeName="StrategicStrikeModel.Job">
+        <MappingFragment StoreEntitySet="Jobs">
+          <ScalarProperty Name="jbKeywordsMetaTag" ColumnName="jbKeywordsMetaTag" />
+          <ScalarProperty Name="jbSkinATS" ColumnName="jbSkinATS" />
+          <ScalarProperty Name="jbSkinNASG" ColumnName="jbSkinNASG" />
+          <ScalarProperty Name="jbSkinJobs4Act" ColumnName="jbSkinJobs4Act" />
+          <ScalarProperty Name="jbInternship" ColumnName="jbInternship" />
+          <ScalarProperty Name="jbContactInfo" ColumnName="jbContactInfo" />
+          <ScalarProperty Name="jbCreateDate" ColumnName="jbCreateDate" />
+          <ScalarProperty Name="jbURL" ColumnName="jbURL" />
+          <ScalarProperty Name="jbRefCode" ColumnName="jbRefCode" />
+          <ScalarProperty Name="jbTotalSalaryHigh" ColumnName="jbTotalSalaryHigh" />
+          <ScalarProperty Name="jbTotalSalaryLow" ColumnName="jbTotalSalaryLow" />
+          <ScalarProperty Name="jbNotWriting" ColumnName="jbNotWriting" />
+          <ScalarProperty Name="jbWriting" ColumnName="jbWriting" />
+          <ScalarProperty Name="jbFellow" ColumnName="jbFellow" />
+          <ScalarProperty Name="jbUnknownClient" ColumnName="jbUnknownClient" />
+          <ScalarProperty Name="jbEmail" ColumnName="jbEmail" />
+          <ScalarProperty Name="jbSalaryHighUS" ColumnName="jbSalaryHighUS" />
+          <ScalarProperty Name="jbSalaryLowUS" ColumnName="jbSalaryLowUS" />
+          <ScalarProperty Name="jbActive" ColumnName="jbActive" />
+          <ScalarProperty Name="jbOnWebTo" ColumnName="jbOnWebTo" />
+          <ScalarProperty Name="jbOnWebFrom" ColumnName="jbOnWebFrom" />
+          <ScalarProperty Name="jbPostingTo" ColumnName="jbPostingTo" />
+          <ScalarProperty Name="jbPostingFrom" ColumnName="jbPostingFrom" />
+          <ScalarProperty Name="jbLastUpdateBy" ColumnName="jbLastUpdateBy" />
+          <ScalarProperty Name="jbCreatedBy" ColumnName="jbCreatedBy" />
+          <ScalarProperty Name="jbReferenceID" ColumnName="jbReferenceID" />
+          <ScalarProperty Name="jbEntryLevel" ColumnName="jbEntryLevel" />
+          <ScalarProperty Name="jbCountryVisible" ColumnName="jbCountryVisible" />
+          <ScalarProperty Name="jbStateVisible" ColumnName="jbStateVisible" />
+          <ScalarProperty Name="jbCityVisible" ColumnName="jbCityVisible" />
+          <ScalarProperty Name="jbCity" ColumnName="jbCity" />
+          <ScalarProperty Name="jbState" ColumnName="jbState" />
+          <ScalarProperty Name="jbCityID" ColumnName="jbCityID" />
+          <ScalarProperty Name="jbStateID" ColumnName="jbStateID" />
+          <ScalarProperty Name="jbCountryID" ColumnName="jbCountryID" />
+          <ScalarProperty Name="jbLastUpdate" ColumnName="jbLastUpdate" />
+          <ScalarProperty Name="jbNotes" ColumnName="jbNotes" />
+          <ScalarProperty Name="jbLife" ColumnName="jbLife" />
+          <ScalarProperty Name="jbBonus" ColumnName="jbBonus" />
+          <ScalarProperty Name="jbSalaryCurrency" ColumnName="jbSalaryCurrency" />
+          <ScalarProperty Name="jbSalaryHigh" ColumnName="jbSalaryHigh" />
+          <ScalarProperty Name="jbSalaryLow" ColumnName="jbSalaryLow" />
+          <ScalarProperty Name="jbExp1c" ColumnName="jbExp1c" />
+          <ScalarProperty Name="jbExp1b" ColumnName="jbExp1b" />
+          <ScalarProperty Name="jbExp1a" ColumnName="jbExp1a" />
+          <ScalarProperty Name="jbExamMax" ColumnName="jbExamMax" />
+          <ScalarProperty Name="jbExamMin" ColumnName="jbExamMin" />
+          <ScalarProperty Name="jbPDCredits" ColumnName="jbPDCredits" />
+          <ScalarProperty Name="jbTotalCredits" ColumnName="jbTotalCredits" />
+          <ScalarProperty Name="jbTotalExams" ColumnName="jbTotalExams" />
+          <ScalarProperty Name="jbReportTo" ColumnName="jbReportTo" />
+          <ScalarProperty Name="jbReportToID" ColumnName="jbReportToID" />
+          <ScalarProperty Name="jbOnWeb" ColumnName="jbOnWeb" />
+          <ScalarProperty Name="jbFilledDate" ColumnName="jbFilledDate" />
+          <ScalarProperty Name="jbCandidateID" ColumnName="jbCandidateID" />
+          <ScalarProperty Name="jbAttachment" ColumnName="jbAttachment" />
+          <ScalarProperty Name="jbDescription" ColumnName="jbDescription" />
+          <ScalarProperty Name="jbDepartment" ColumnName="jbDepartment" />
+          <ScalarProperty Name="jbIntTitleID" ColumnName="jbIntTitleID" />
+          <ScalarProperty Name="jbJobTitle" ColumnName="jbJobTitle" />
+          <ScalarProperty Name="jbJobLevelHigh" ColumnName="jbJobLevelHigh" />
+          <ScalarProperty Name="jbJobLevelLow" ColumnName="jbJobLevelLow" />
+          <ScalarProperty Name="jbJobCatID" ColumnName="jbJobCatID" />
+          <ScalarProperty Name="jbJobDate" ColumnName="jbJobDate" />
+          <ScalarProperty Name="jbAgentID" ColumnName="jbAgentID" />
+          <ScalarProperty Name="jbLocationID" ColumnName="jbLocationID" />
+          <ScalarProperty Name="jbClientID" ColumnName="jbClientID" />
+          <ScalarProperty Name="jbLanguageID" ColumnName="jbLanguageID" />
+          <ScalarProperty Name="jbJobID" ColumnName="jbJobID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="plJobKeywords">
+      <EntityTypeMapping TypeName="StrategicStrikeModel.plJobKeyword">
+        <MappingFragment StoreEntitySet="plJobKeywords">
+          <ScalarProperty Name="jkWords" ColumnName="jkWords" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
